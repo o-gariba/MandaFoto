@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Projeto 4 - React State e Routes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Desafio
 
-## Available Scripts
+Criar um feed de um perfil do Instagram
 
-In the project directory, you can run:
+## O que devo fazer?
 
-### `npm start`
+> 1. Pensar em um nome para o projeto. Lembrando que ele vai ser similar ao Instagram
+> > ideias: Instagram, gramInsta, Insgramta, Mandafoto, Fotonow
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> 2. Readme com: 
+> > - Descrição do projeto
+> > - Tecnologias usadas: reactJs, design system
+> > - Link do deploy
+> > - Desenvolvedores
+> ***Sugestão de readme: [MaisVocê Receitas](https://github.com/camiyung/MaisVoce)***
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> 3. Header contendo:
+> > - Nome do projeto (estilizar no gimp ou no Canva)
+> > - Botão para add uma nova postagem no meu perfil
+> > > - Ao clicar no botão, um MODAL deve aparecer, contendo as seguintes informações:
+> > > > - ????
+> > > - Quando clicar em postar, quero ver o meu novo post no meu feed
+> > - Quando a postagem for concluída, um TOAST de sucesso deve aparecer
 
-### `npm test`
+> 4. Carousel na homepage com pelo menos 5 avatares de outros usuários (igual a sessão de stories do Insta)
+> > - Quando clicar em um avatar, redirecionar (Router) para a página desse usuário, que deve conter:
+> > > - Avatar em tamanho maior (como no insta)
+> > > - Nome
+> > > - numero de publicações, seguidores e seguindo (igual insta)
+> > > - Bio
+> > > - 6 publicações (imagens retangulares simples)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> 5. Na pág. inicial, deve ter 3 publicações, nome, foto, ícones de curtir, compartilhar, salvar e campo para comentar com botão para publicar
+> > - Ícones brancos
+> > - quando clicar no CURTIR, o coração se torna vermelho
+> > - Se clicar novamente em curtir, volta a ficar branco
+> > - Clicando no campo comentar, posso digitar uma mensagem
+> > > - Após escrever a mensagem, posso clicar em PUBLICAR, poderei ver minha mensagem logo abaixo do vampo para escrever comentarios 
+> > - Clicando em compartilhar,um MODAL deve aparecer com um campo de input para que eu escreva o nome de um usuario da rede. Clicando em enviar, um TOAST de sucesso deve aparecer
+> > - Clicando no icone SALVAR, ele sai de branco para preto. Clicando novamente, ele volta a ficar branco
+> > - Footer nao precisa ter redes sociais
 
-### `npm run build`
+### Organização pessoal / Ordem de desenvolvimento
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Listar o número de páginas diferentes
+> - Página inicial (com campo de add nova img, carousel e 3 publicações aleatorias) 
+> - 5 páginas e usuarios imaginários (páginas com a msm estrutura)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Modais que vou usar
+> - Para postar uma nova img
+> - Quando clico em compartilhar um post de outro usuario
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Desenhar no Presentations o fluxo de interações E CONFIRMAR COM A ALÊ 
+> - [Esboço do fluxo de interações](https://docs.google.com/presentation/d/1xFZ_omP688UxY2f1HHezlSQBqCVIW3uFKvUn_oc-g4w/edit?usp=sharing)
 
-### `npm run eject`
+- Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Fazer estilos com chackra (?)
