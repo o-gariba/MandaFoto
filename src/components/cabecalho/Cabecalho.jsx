@@ -1,8 +1,6 @@
 import * as React from 'react'
 
 import { Box, Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from "@chakra-ui/react"
-import { Fragment } from "react"
-
 
 const Cabecalho = ({user}) => {
     const { onOpen, isOpen, onClose } = useDisclosure()
@@ -61,7 +59,10 @@ const Cabecalho = ({user}) => {
                         <Button colorScheme={'red'} mr={3} 
                             onClick={() => 
                                 toast(
-                                    {title: 'success toast', status: 'success', isClosable: true,
+                                    {
+                                        title: 'Publicado com sucesso',
+                                        status: 'success',
+                                        isClosable: true,
                                     }
                                 )
                             }
