@@ -1,18 +1,17 @@
-import { SimpleGrid, Text } from "@chakra-ui/react"
+import { Container, SimpleGrid, Text } from "@chakra-ui/react"
+import PostImagem from "../postImagens/PostImagem"
 
-function PostArea() {
+import PostPadroes from "../postPadroes/PostPadroes"
+
+function PostArea({ children }) {
     return (
-        <>
-            <SimpleGrid minChildWidth='250px' spacing='50px' >
-                {/* Cards aqui */}
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-                <Text fontSize={'5xl'} color='red.500'>Card</Text>
-            </SimpleGrid>
-        </>
+        <SimpleGrid 
+            minChildWidth='350px'
+            spacing='100px'
+            m={'0 8%'}
+        >
+            {children}
+        </SimpleGrid>
     )
 }
 

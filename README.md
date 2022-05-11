@@ -11,7 +11,7 @@ Criar um feed de um perfil do Instagram
 
 > 2. Readme com: 
 > > - Descrição do projeto
-> > - Tecnologias usadas: reactJs, design system
+> > - Tecnologias usadas: reactJs, Chakra UI
 > > - Link do deploy
 > > - Desenvolvedores
 > ***Sugestão de readme: [MaisVocê Receitas](https://github.com/camiyung/MaisVoce)***
@@ -56,5 +56,13 @@ Criar um feed de um perfil do Instagram
 > - [Esboço do fluxo de interações](https://docs.google.com/presentation/d/1xFZ_omP688UxY2f1HHezlSQBqCVIW3uFKvUn_oc-g4w/edit?usp=sharing)
 
 - Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
+> Ordem de funcionalidades:
+> > - Trocar os ícones e aplicar os efeitos onClick do Post
+> > - Fazer o modal de compartilhamento
+> > - Fazer o campo de comentário aparecer e funcionar
+> > - Fazer o Carousel de usuários com imgs predefinidas
+> > - Aplicar o Post no PostArea, usando a relação de pai e filhos do React (Estudar se não seria melhor deixar Post e PostArea em um mesmo componente para agilizar) 
+> > - Fazer o botão de postagem gerar um Post (Ver vídeo da Alura do bloco de notas)
+> > - Organizar os Posts em ordem de postagem
 
 - Fazer estilos com chackra (?)

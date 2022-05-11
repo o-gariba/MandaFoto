@@ -2,7 +2,11 @@ import * as React from 'react'
 
 import { Box, Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from "@chakra-ui/react"
 
-const Cabecalho = ({user}) => {
+const Cabecalho = ({ logo, criarPost }) => {
+    const [urlAvatar, setUrlAvatar] = React.useState('')
+    const [usuario, setUsuario] = React.useState('')
+    const [imgPost, setImgPost] = React.useState('')
+    
     const { onOpen, isOpen, onClose } = useDisclosure()
 
     const initialRef = React.useRef()
@@ -22,10 +26,9 @@ const Cabecalho = ({user}) => {
             >
 
                 <Image
-                    src={user}
+                    src={ logo }
                     alt="avatar do usuário atual"
-                    borderRadius={'full'}     
-                    boxSize='100px'
+                    width={'150px'}
                 />
                 <Button
                     colorScheme={'red'}
@@ -49,15 +52,34 @@ const Cabecalho = ({user}) => {
                     <ModalCloseButton />
 
                     <ModalBody pb={4}>
-                        <FormControl>
-                            <FormLabel>URL da img</FormLabel>
-                            <Input ref={initialRef} placeholder="Ex: https://url-da-sua-img.com" />
+                        <FormControl 
+                        >
+
+                            <FormLabel>URL do seu avatar</FormLabel>
+                            <Input ref={initialRef} placeholder="Ex: https://url-da-sua-img.com" 
+                                onChange={(dado) => setUrlAvatar(dado.target.value)} 
+                            />
+
+                            <FormLabel>Usuário</FormLabel>
+                            <Input placeholder="seu_nickname" 
+                                onChange={(dado) => setUsuario(dado.target.value)}
+                            />
+
+                            <FormLabel>URL da img a ser postada</FormLabel>
+                            <Input placeholder="Ex: https://url-da-sua-img.com" 
+                                onChange={(dado) => setImgPost(dado.target.value)}
+                            />
+
                         </FormControl>
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme={'red'} mr={3} 
-                            onClick={() => 
+                        <Button 
+                            type='submit'
+                            colorScheme={'red'} mr={3} 
+                            onClick={(e) => {
+                                console.log('form submetido')
+                                criarPost(urlAvatar, usuario, imgPost)
                                 toast(
                                     {
                                         title: 'Publicado com sucesso',
@@ -65,7 +87,7 @@ const Cabecalho = ({user}) => {
                                         isClosable: true,
                                     }
                                 )
-                            }
+                            }}
                         >
                             Postar
                         </Button>
