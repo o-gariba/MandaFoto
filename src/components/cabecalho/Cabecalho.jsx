@@ -22,7 +22,7 @@ const Cabecalho = ({ logo, criarPost }) => {
                 justifyContent='space-around'
                 p={3}
                 width='100%'
-                backgroundColor={'gray.500'}
+                backgroundColor={'gray.400'}
             >
 
                 <Image

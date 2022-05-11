@@ -1,7 +1,4 @@
-import { Container, SimpleGrid, Text } from "@chakra-ui/react"
-import PostImagem from "../postImagens/PostImagem"
-
-import PostPadroes from "../postPadroes/PostPadroes"
+import { SimpleGrid } from "@chakra-ui/react"
 
 function PostArea({ children }) {
     return (

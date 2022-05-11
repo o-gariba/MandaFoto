@@ -57,12 +57,12 @@ Criar um feed de um perfil do Instagram
 
 - Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
 > Ordem de funcionalidades:
-> > - Trocar os ícones e aplicar os efeitos onClick do Post
-> > - Fazer o modal de compartilhamento
-> > - Fazer o campo de comentário aparecer e funcionar
-> > - Fazer o Carousel de usuários com imgs predefinidas
-> > - Aplicar o Post no PostArea, usando a relação de pai e filhos do React (Estudar se não seria melhor deixar Post e PostArea em um mesmo componente para agilizar) 
-> > - Fazer o botão de postagem gerar um Post (Ver vídeo da Alura do bloco de notas)
-> > - Organizar os Posts em ordem de postagem
+> > - [] Footer
+> > - [] Fazer o modal de compartilhamento
+> > - [] Fazer o campo de comentário aparecer e funcionar (usar accordion @chakra)
+> > - [] Fazer com que a página de cada usuário apareça ao clicar no seu avatar
+> > - [] Estruturar como o router vai funcionar
+> > - [] Curtir e salvar sem alterar a img do post e do avatar
+> > - [] Fazer Readme
 
 - Fazer estilos com chackra (?)

@@ -5,7 +5,7 @@ import PostDadosForm from "../postDadosForm/PostDadosForm"
 import PostImagem from "../postImagens/PostImagem"
 import PostPadroes from "../postPadroes/PostPadroes"
 
-const PerfilUser = () => {
+const PerfilUser = ({ users }) => {
     return (
         <Fragment>
             <Flex
@@ -18,7 +18,7 @@ const PerfilUser = () => {
                     boxSize='100%'
                     maxWidth={'300px'}
                     maxHeight={'300px'}
-                    src="https://picsum.photos/seed/dshalfkj/200"
+                    src={users}
                 />
                 <Flex 
                     direction={'column'}
