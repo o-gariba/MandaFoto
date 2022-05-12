@@ -57,9 +57,9 @@ Criar um feed de um perfil do Instagram
 
 - Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
 > Ordem de funcionalidades:
-> > - [] Footer
+> > - [X] Footer
 > > - [] Fazer o modal de compartilhamento
-> > - [] Fazer o campo de comentário aparecer e funcionar (usar accordion @chakra)
+> > - [X] Fazer o campo de comentário aparecer e funcionar (usar accordion @chakra)
 > > - [] Fazer com que a página de cada usuário apareça ao clicar no seu avatar
 > > - [] Estruturar como o router vai funcionar
 > > - [] Curtir e salvar sem alterar a img do post e do avatar

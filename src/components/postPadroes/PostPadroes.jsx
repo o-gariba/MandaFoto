@@ -1,12 +1,13 @@
-import { Center, Box, Flex, Image, Icon, Text } from '@chakra-ui/react'
+import { Center, Box, Flex, Image, Icon, Text, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Textarea, Button } from '@chakra-ui/react'
 
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import { BsBookmarkHeart, BsBookmarkHeartFill } from 'react-icons/bs'
 import { IoPaperPlaneOutline } from 'react-icons/io5'
 import { BiCommentDetail } from 'react-icons/bi'
 import { useState } from 'react'
+import { ChatIcon } from '@chakra-ui/icons'
 
-const PostPadroes = () => {
+const PostPadroes = ({ criarComentario, comentario }) => {
 
     const [curtido, setCurtido] = useState(false)
     const [salvo, setSalvo] = useState(false)
@@ -20,32 +21,40 @@ const PostPadroes = () => {
     }
 
     const qualIconCoracao = (estado) => {
-        if (estado) { 
-            return <Icon as={AiFillHeart} boxSize={5} color='red' />
+        if (estado) {
+            return <Icon as={AiFillHeart} boxSize={6} color='red' />
         }
         else {
-            return <Icon as={AiOutlineHeart} boxSize={5} />
+            return <Icon as={AiOutlineHeart} boxSize={6} />
         }
     }
 
     const qualIconSalvar = (estado) => {
-        if (estado) { 
-            return <Icon as={BsBookmarkHeartFill} boxSize={5} />
+        if (estado) {
+            return <Icon as={BsBookmarkHeartFill} boxSize={6} />
         }
         else {
-            return <Icon as={BsBookmarkHeart} boxSize={5} />
+            return <Icon as={BsBookmarkHeart} boxSize={6} />
         }
+    }
+
+    const [comentarios, setComentarios] = useState([])
+
+    const handleComentario = (comentario) => {
+        // console.log(comentarios)
+        const novoArrayComentario = [...comentarios, comentario]
+        setComentarios(novoArrayComentario)
     }
 
     const propriedades = {
         nomeUser: 'userTeste',
         curtir: qualIconCoracao(curtido),
-        comentar: <Icon as={BiCommentDetail} boxSize={5} />,
-        compartilhar: <Icon as={IoPaperPlaneOutline} boxSize={5} />,
+        comentar: <Icon as={BiCommentDetail} boxSize={6} />,
+        compartilhar: <Icon as={IoPaperPlaneOutline} boxSize={6} />,
         salvar: qualIconSalvar(salvo),
         descricaoPost: 'descrição do post',
     }
-    
+
     return (
         <>
             <Center>
@@ -62,16 +71,17 @@ const PostPadroes = () => {
                         <Image borderRadius={'full'} boxSize='50px' src={`https://picsum.photos/seed/${Math.random()}/200`} />
                         <Text fontSize={'xl'}>
                             {propriedades.nomeUser}
-                        </Text> 
+                        </Text>
                     </Flex>
-                    <Image src={`https://picsum.photos/seed/${Math.random()}/400`} alt={''} />
+                    <Image src={`https://picsum.photos/seed/${Math.random()}/410`} alt={''} />
                     <Box
                         p='1'
                         borderWidth={'1px'}
                     >
-                        <Flex
+                        {/* <Flex
                             ml={0}
                             gap='2'
+                            m={'10px 0'}
                         >
                             <Box as="button" onClick={curti}>
                                 {propriedades.curtir}
@@ -91,11 +101,58 @@ const PostPadroes = () => {
                                 </Box>
                             </Flex>
 
-                        </Flex>
+                        </Flex> */}
 
-                        <Box>
-                            {propriedades.descricaoPost}
-                        </Box>
+                        <Accordion allowToggle>
+                            <AccordionItem>
+                                    <AccordionButton
+                                        boxSize={'auto'}
+                                    >
+                                        <Box
+                                            boxSize={'auto'}
+                                        >
+                                           <ChatIcon boxSize={'6'}/> 
+                                        </Box>
+                                    </AccordionButton>
+                            <Box>
+                                {propriedades.descricaoPost}
+                            </Box>
+
+                                <AccordionPanel  pb={2}>
+                                    <form
+                                        onSubmit={(e) => {
+                                            e.preventDefault()
+                                            // criarComentario(comentarios)
+                                            console.log(e.target[0].value)
+                                            handleComentario(e.target[0].value)
+                                            e.target.reset()
+                                        }}
+                                    >
+                                        <Textarea 
+                                            size={'md'}
+                                            resize='none'
+                                            placeholder='Comente aqui...'
+                                            rows={'1'}
+                                            width='70%'
+                                            // onChange={e => {
+                                            //     setComentarios(e.target.value)
+                                            // }}
+                                        />
+                                        <Button
+                                            width={'80px'}
+                                            type='submit'
+                                            colorScheme={'red'}
+                                        >
+                                            Publicar
+                                        </Button>
+                                    </form>
+                                    {comentarios.map((com, index) => {
+                                        return <p key={index}>{com}</p>
+                                    })}
+                                </AccordionPanel>
+                            </AccordionItem>
+                        </Accordion>
+
                     </Box>
                 </Box>
             </Center>

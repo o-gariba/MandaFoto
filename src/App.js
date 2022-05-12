@@ -28,12 +28,21 @@ function App() {
     const novoArray = [...posts, novoPost]
     setPosts(novoArray)
   }
+
+  const [comentarios, setComentarios] = useState([])
+
+  const criarComentario = (comentario) => {
+    // console.log(`dado recebido no app.js: ${comentario}`)
+    const novoArray = [...comentarios, comentario]
+    setComentarios(novoArray)
+  }
   
   return (
     <Fragment>
       <Cabecalho logo={logo} criarPost={criarPost} />
       <Carousel avatars={[user1, user2, user3, user4, user5]}/>
       <PostArea>
+        {/* <PostPadroes criarComentario={criarComentario} comentario={comentarios}/> */}
         <PostPadroes />
         <PostPadroes />
         <PostPadroes />
