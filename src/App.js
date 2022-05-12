@@ -17,6 +17,8 @@ import PerfilUser from './components/perfilUser/PerfilUser';
 import PostPadroes from './components/postPadroes/PostPadroes';
 import Footer from './components/footer/Footer';
 
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+
 
 function App() {
 
@@ -38,20 +40,23 @@ function App() {
   }
   
   return (
-    <Fragment>
-      <Cabecalho logo={logo} criarPost={criarPost} />
-      <Carousel avatars={[user1, user2, user3, user4, user5]}/>
-      <PostArea>
-        {/* <PostPadroes criarComentario={criarComentario} comentario={comentarios}/> */}
-        <PostPadroes />
-        <PostPadroes />
-        <PostPadroes />
-      </PostArea>
-      {/* <PostDadosForm posts={posts} /> */}
-      {/* <PerfilUser users={user1}/> */}
-      <Footer />
-    </Fragment>
-  );
+      <Router>
+        <Cabecalho logo={logo} criarPost={criarPost} />
+        <Carousel avatars={[user1, user2, user3, user4, user5]}/>
+        <Routes>
+          <Route path='/' element={
+          <PostArea>
+            <PostPadroes />
+            <PostPadroes />
+            <PostPadroes />
+          </PostArea>
+          } />
+          <Route path='/user1' element={<PerfilUser users={user1}/>} />
+        </Routes>
+        {/* <PostDadosForm posts={posts} /> */}
+        <Footer />
+      </Router>
+  )
 }
 
 export default App;

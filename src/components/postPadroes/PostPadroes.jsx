@@ -1,10 +1,10 @@
-import { Center, Box, Flex, Image, Icon, Text, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Textarea, Button } from '@chakra-ui/react'
+import { Center, Box, Flex, Image, Icon, Text, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Textarea, Button, useDisclosure, useToast, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, Input, ModalFooter } from '@chakra-ui/react'
 
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import { BsBookmarkHeart, BsBookmarkHeartFill } from 'react-icons/bs'
 import { IoPaperPlaneOutline } from 'react-icons/io5'
 import { BiCommentDetail } from 'react-icons/bi'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { ChatIcon } from '@chakra-ui/icons'
 
 const PostPadroes = ({ criarComentario, comentario }) => {
@@ -46,10 +46,15 @@ const PostPadroes = ({ criarComentario, comentario }) => {
         setComentarios(novoArrayComentario)
     }
 
+    const { onOpen, isOpen, onClose } = useDisclosure()
+
+    const initialRef = useRef()
+
+    const toastCompartilhou = useToast()
+
     const propriedades = {
         nomeUser: 'userTeste',
         curtir: qualIconCoracao(curtido),
-        // comentar: <Icon as={BiCommentDetail} boxSize={} />,
         compartilhar: <Icon as={IoPaperPlaneOutline} boxSize={8} />,
         salvar: qualIconSalvar(salvo),
         descricaoPost: 'descrição do post',
@@ -78,16 +83,6 @@ const PostPadroes = ({ criarComentario, comentario }) => {
                         p='1'
                         borderWidth={'1px'}
                     >
-                        {/* <Flex
-                            ml={0}
-                            gap='2'
-                            m={'10px 0'}
-                        > */}
-                            {/* <Box as="button">
-                                {propriedades.comentar}
-                            </Box> */}
-
-                        {/* </Flex> */}
 
                         <Accordion allowToggle>
                             <AccordionItem>
@@ -103,12 +98,13 @@ const PostPadroes = ({ criarComentario, comentario }) => {
                                         boxSize={'fit-content'}
                                     >
                                         <Box
-                                            // boxSize={'auto'}
                                         >
                                            <ChatIcon boxSize={'6'}/> 
                                         </Box>
                                     </AccordionButton>
-                                    <Box as="button">
+                                    <Box as="button"
+                                        onClick={onOpen}
+                                    >
                                         {propriedades.compartilhar}
                                     </Box>
 
@@ -162,6 +158,53 @@ const PostPadroes = ({ criarComentario, comentario }) => {
                     </Box>
                 </Box>
             </Center>
+
+            <Modal
+                initialFocusRef={initialRef}
+                isOpen={isOpen}
+                onClose={onClose}
+            >
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>
+                        Para qual user quer encaminhar?
+                    </ModalHeader>
+                    <ModalCloseButton />
+
+                    <ModalBody pb={4}>
+                        <FormControl>
+                            <FormLabel>
+                                Qual user vai receber o post?
+                            </FormLabel>
+                            <Input
+                                ref={initialRef}
+                                placeholder='@nome_user'
+                            ></Input>
+                        </FormControl>
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button
+                            colorScheme={'red'}
+                            mr={3}
+                            onClick={() => toastCompartilhou(
+                                {
+                                    title: 'Encaminhado com sucesso',
+                                    status: 'success',
+                                    isClosable: true,
+                                }
+                            )}
+                        >
+                            Enviar
+                        </Button>
+                        <Button
+                            onClick={onClose}
+                        >
+                            Cancelar
+                        </Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
         </>
     )
 }

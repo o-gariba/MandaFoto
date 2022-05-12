@@ -1,5 +1,7 @@
 import { Wrap, WrapItem, Avatar, Center, Button, Box, Flex, Image} from "@chakra-ui/react"
 
+import { Link } from "react-router-dom"
+
 const Carousel = ({ avatars }) => {
     return (
         <Center 
@@ -15,11 +17,13 @@ const Carousel = ({ avatars }) => {
                 <Box
                     as="button"
                 >
-                    <Image 
-                        borderRadius={'full'}
-                        src={avatars[0]}
-                        alt='rosto de uma pessoa'
-                    />
+                    <Link to={'/user1'}>
+                        <Image 
+                            borderRadius={'full'}
+                            src={avatars[0]}
+                            alt='rosto de uma pessoa'
+                        />
+                    </Link>
                 </Box>
                 <Box
                     as="button"
