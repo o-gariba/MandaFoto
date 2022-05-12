@@ -65,7 +65,7 @@ const PostPadroes = ({ criarComentario, comentario }) => {
             <Center>
                 <Box
                     overflow={'hidden'}
-                    maxWidth='500px'
+                    maxWidth='410px'
                     borderWidth={'2px'}
                 >
                     <Flex

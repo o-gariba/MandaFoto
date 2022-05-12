@@ -1,8 +1,10 @@
 import * as React from 'react'
 
 import { Box, Button, FormControl, FormLabel, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure, useToast } from "@chakra-ui/react"
+import { Link } from 'react-router-dom'
 
 const Cabecalho = ({ logo, criarPost }) => {
+
     const [urlAvatar, setUrlAvatar] = React.useState('')
     const [usuario, setUsuario] = React.useState('')
     const [imgPost, setImgPost] = React.useState('')
@@ -24,12 +26,13 @@ const Cabecalho = ({ logo, criarPost }) => {
                 width='100%'
                 backgroundColor={'gray.400'}
             >
-
-                <Image
-                    src={ logo }
-                    alt="avatar do usuário atual"
-                    width={'150px'}
-                />
+                <Link to={'/'}>
+                    <Image
+                        src={ logo }
+                        alt="logo Postei"
+                        width={'150px'}
+                    />
+                </Link>
                 <Button
                     colorScheme={'red'}
                     size='lg'
@@ -76,9 +79,10 @@ const Cabecalho = ({ logo, criarPost }) => {
                     <ModalFooter>
                         <Button 
                             type='submit'
-                            colorScheme={'red'} mr={3} 
+                            colorScheme={'red'}
+                            mr={3} 
                             onClick={(e) => {
-                                console.log('form submetido')
+                                // console.log('form submetido')
                                 criarPost(urlAvatar, usuario, imgPost)
                                 toast(
                                     {

@@ -9,7 +9,7 @@ const PerfilUser = ({ users }) => {
     return (
         <Fragment>
             <Flex
-                m={'5% 0'}
+                m={'5% 3%'}
                 justify={'center'}
                 gap='4%'
             >

@@ -1,4 +1,4 @@
-import { Wrap, WrapItem, Avatar, Center, Button, Box, Flex, Image} from "@chakra-ui/react"
+import { Center, Box, Flex, Image} from "@chakra-ui/react"
 
 import { Link } from "react-router-dom"
 
@@ -7,7 +7,7 @@ const Carousel = ({ avatars }) => {
         <Center 
             m={'5% 7%'}
             p={'2% 2%'}
-            border={'3px solid green'}
+            border={'3px solid red'}
             borderRadius='15px'
         >
             <Flex
@@ -28,38 +28,46 @@ const Carousel = ({ avatars }) => {
                 <Box
                     as="button"
                 >
-                    <Image 
-                    borderRadius={'full'}
-                    src={avatars[1]}
-                    alt='rosto de uma pessoa'
-                    />
+                    <Link to={'/user2'}>
+                        <Image 
+                            borderRadius={'full'}
+                            src={avatars[1]}
+                            alt='rosto de uma pessoa'
+                        />
+                    </Link>
                 </Box>
                 <Box
                     as="button"
                 >
-                    <Image 
-                        borderRadius={'full'}
-                        src={avatars[2]}
-                        alt='rosto de uma pessoa'
-                    />
+                    <Link to={'/user3'}>
+                        <Image 
+                            borderRadius={'full'}
+                            src={avatars[2]}
+                            alt='rosto de uma pessoa'
+                        />
+                    </Link>
                 </Box>
                 <Box
                     as="button"
                 >
-                    <Image 
-                        borderRadius={'full'}
-                        src={avatars[3]}
-                        alt='rosto de uma pessoa'
-                    />
+                    <Link to={'/user4'}>
+                        <Image 
+                            borderRadius={'full'}
+                            src={avatars[3]}
+                            alt='rosto de uma pessoa'
+                        />
+                    </Link>
                 </Box>
                 <Box
                     as="button"
                 >
-                    <Image 
-                        borderRadius={'full'}
-                        src={avatars[4]}
-                        alt='rosto de uma pessoa'
-                    />
+                    <Link to={'/user5'}>
+                        <Image 
+                            borderRadius={'full'}
+                            src={avatars[4]}
+                            alt='rosto de uma pessoa'
+                        />
+                    </Link>
                 </Box>
             </Flex>
             {/* <Wrap spacing={'50px'}>

@@ -60,8 +60,8 @@ Criar um feed de um perfil do Instagram
 > > - [X] Footer
 > > - [X] Fazer o modal de compartilhamento
 > > - [X] Fazer o campo de comentário aparecer e funcionar (usar accordion @chakra)
-> > - [] Fazer o post customizado aceitar todas as funcionalidades adicionadas nos posts padrões
-> > - [] Fazer com que a página de cada usuário apareça ao clicar no seu avatar
+> > - [X] Fazer o post customizado aceitar todas as funcionalidades adicionadas nos posts padrões
+> > - [X] Fazer com que a página de um usuário apareça ao clicar no seu avatar
 > > - [] Estruturar como o router vai funcionar
 > > - [] Curtir e salvar sem alterar a img do post e do avatar
 > > - [] Fazer Readme
