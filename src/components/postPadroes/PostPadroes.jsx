@@ -22,19 +22,19 @@ const PostPadroes = ({ criarComentario, comentario }) => {
 
     const qualIconCoracao = (estado) => {
         if (estado) {
-            return <Icon as={AiFillHeart} boxSize={6} color='red' />
+            return <Icon as={AiFillHeart} boxSize={8} color='red' />
         }
         else {
-            return <Icon as={AiOutlineHeart} boxSize={6} />
+            return <Icon as={AiOutlineHeart} boxSize={8} />
         }
     }
 
     const qualIconSalvar = (estado) => {
         if (estado) {
-            return <Icon as={BsBookmarkHeartFill} boxSize={6} />
+            return <Icon as={BsBookmarkHeartFill} boxSize={8} />
         }
         else {
-            return <Icon as={BsBookmarkHeart} boxSize={6} />
+            return <Icon as={BsBookmarkHeart} boxSize={8} />
         }
     }
 
@@ -49,8 +49,8 @@ const PostPadroes = ({ criarComentario, comentario }) => {
     const propriedades = {
         nomeUser: 'userTeste',
         curtir: qualIconCoracao(curtido),
-        comentar: <Icon as={BiCommentDetail} boxSize={6} />,
-        compartilhar: <Icon as={IoPaperPlaneOutline} boxSize={6} />,
+        // comentar: <Icon as={BiCommentDetail} boxSize={} />,
+        compartilhar: <Icon as={IoPaperPlaneOutline} boxSize={8} />,
         salvar: qualIconSalvar(salvo),
         descricaoPost: 'descrição do post',
     }
@@ -82,38 +82,44 @@ const PostPadroes = ({ criarComentario, comentario }) => {
                             ml={0}
                             gap='2'
                             m={'10px 0'}
-                        >
-                            <Box as="button" onClick={curti}>
-                                {propriedades.curtir}
-                            </Box>
-                            <Box as="button">
+                        > */}
+                            {/* <Box as="button">
                                 {propriedades.comentar}
-                            </Box>
-                            <Box as="button">
-                                {propriedades.compartilhar}
-                            </Box>
+                            </Box> */}
 
-                            <Flex
-                                ml={'auto'}
-                            >
-                                <Box as="button" onClick={salvei}>
-                                    {propriedades.salvar}
-                                </Box>
-                            </Flex>
-
-                        </Flex> */}
+                        {/* </Flex> */}
 
                         <Accordion allowToggle>
                             <AccordionItem>
+                                <Flex
+                                    ml={0}
+                                    gap='2'
+                                    m={'10px 0'}
+                                >
+                                    <Box as="button" onClick={curti}>
+                                        {propriedades.curtir}
+                                    </Box>
                                     <AccordionButton
-                                        boxSize={'auto'}
+                                        boxSize={'fit-content'}
                                     >
                                         <Box
-                                            boxSize={'auto'}
+                                            // boxSize={'auto'}
                                         >
                                            <ChatIcon boxSize={'6'}/> 
                                         </Box>
                                     </AccordionButton>
+                                    <Box as="button">
+                                        {propriedades.compartilhar}
+                                    </Box>
+
+                                    <Flex
+                                        ml={'auto'}
+                                    >
+                                        <Box as="button" onClick={salvei}>
+                                            {propriedades.salvar}
+                                        </Box>
+                                    </Flex>
+                                </Flex>
                             <Box>
                                 {propriedades.descricaoPost}
                             </Box>
