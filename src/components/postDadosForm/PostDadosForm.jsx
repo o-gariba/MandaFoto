@@ -79,7 +79,11 @@ const PostDadosForm = ({ posts }) => {
                                         {post.usuario}
                                     </Text>
                                 </Flex>
-                                <Image src={post.imgPost} alt={propriedades.imageAlt} />
+                                <Image 
+                                    src={post.imgPost} 
+                                    alt={propriedades.imageAlt}
+                                    boxSize='400'
+                                />
                                 <Box
                                     p='1'
                                     borderWidth={'1px'}
@@ -124,7 +128,7 @@ const PostDadosForm = ({ posts }) => {
                                                 <form
                                                     onSubmit={(e) => {
                                                         e.preventDefault()
-                                                        console.log(e.target[0].value)
+                                                        e.stopPropagation()
                                                         handleComentario(e.target[0].value)
                                                         e.target.reset()
                                                     }}
@@ -183,13 +187,14 @@ const PostDadosForm = ({ posts }) => {
                                     <Button
                                         colorScheme={'red'}
                                         mr={3}
-                                        onClick={() => toastCompartilhou(
+                                        onClick={(e) => toastCompartilhou(
                                             {
                                                 title: 'Encaminhado com sucesso',
                                                 status: 'success',
                                                 isClosable: true,
                                             }
-                                        )}
+                                        )
+                                        }
                                     >
                                         Enviar
                                     </Button>
