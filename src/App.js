@@ -14,14 +14,10 @@ import PostArea from './components/postArea/PostArea';
 import PostDadosForm from './components/postDadosForm/PostDadosForm';
 import Carousel from './components/carousel/Carousel';
 import PerfilUser from './components/perfilUser/PerfilUser';
-import PostPadroes from './components/postPadroes/PostPadroes';
 import Footer from './components/footer/Footer';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Fragment, useState } from 'react';
-
-// import avatar from 'https://picsum.photos/seed/picsum/123918237/100'
-// import postPadrao from 'https://picsum.photos/seed/picsum/12341231/500'
 
 function App() {
 

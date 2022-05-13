@@ -1,27 +1,38 @@
-import { Center, Box, Flex, Image} from "@chakra-ui/react"
+import { Center, Box, Flex, Image, Container } from "@chakra-ui/react"
+import Slider from 'infinite-react-carousel'
+import { Fragment } from "react"
 
 import { Link } from "react-router-dom"
 
 const Carousel = ({ avatars }) => {
-    return (
-        <Center 
-            m={'5% 7%'}
-            p={'2% 2%'}
-            border={'3px solid red'}
-            borderRadius='15px'
-        >
-            <Flex
-                gap={'8%'}
 
-            > 
+    const settings = {
+        arrows: true,
+        arrowsBlock: true,
+        duration: 100,
+        initialSlide: 0,
+        overScan: 1,
+        pauseOnHover: false,
+        slidesToShow: 5,
+    }
+
+    return (
+        <Box
+            w={'80%'}    
+            m={'5% 10%'}
+        >
+            <Slider
+                {...settings}
+            >
                 <Box
                     as="button"
                 >
                     <Link to={'/user1'}>
-                        <Image 
+                        <Image
                             borderRadius={'full'}
                             src={avatars[0]}
                             alt='rosto de uma pessoa'
+                            width={'200px'}
                         />
                     </Link>
                 </Box>
@@ -29,10 +40,11 @@ const Carousel = ({ avatars }) => {
                     as="button"
                 >
                     <Link to={'/user2'}>
-                        <Image 
+                        <Image
                             borderRadius={'full'}
                             src={avatars[1]}
                             alt='rosto de uma pessoa'
+                            width={'200px'}
                         />
                     </Link>
                 </Box>
@@ -40,10 +52,11 @@ const Carousel = ({ avatars }) => {
                     as="button"
                 >
                     <Link to={'/user3'}>
-                        <Image 
+                        <Image
                             borderRadius={'full'}
                             src={avatars[2]}
                             alt='rosto de uma pessoa'
+                            width={'200px'}
                         />
                     </Link>
                 </Box>
@@ -51,10 +64,11 @@ const Carousel = ({ avatars }) => {
                     as="button"
                 >
                     <Link to={'/user4'}>
-                        <Image 
+                        <Image
                             borderRadius={'full'}
                             src={avatars[3]}
                             alt='rosto de uma pessoa'
+                            width={'200px'}
                         />
                     </Link>
                 </Box>
@@ -62,42 +76,40 @@ const Carousel = ({ avatars }) => {
                     as="button"
                 >
                     <Link to={'/user5'}>
-                        <Image 
+                        <Image
                             borderRadius={'full'}
                             src={avatars[4]}
                             alt='rosto de uma pessoa'
+                            width={'200px'}
                         />
                     </Link>
                 </Box>
-            </Flex>
-            {/* <Wrap spacing={'50px'}>
-                <WrapItem>
-                    <Box as="button">
-                        <Avatar size={'xl'} name='avatar1' src={avatars[0]} />
-                    </Box>
-                </WrapItem>
-                <WrapItem>
-                    <Box as="button">
-                        <Avatar size={'xl'} name='Dan Abrahmov' src={avatars[1]} />
-                    </Box>
-                </WrapItem>
-                <WrapItem>
-                    <Box as="button">
-                        <Avatar size={'xl'} name='Dan Abrahmov' src={avatars[2]} />
-                    </Box>
-                </WrapItem>
-                <WrapItem>
-                    <Box as="button">
-                        <Avatar size={'xl'} name='Dan Abrahmov' src={avatars[3]} />
-                    </Box>
-                </WrapItem>
-                <WrapItem>
-                    <Box as="button">
-                        <Avatar size={'xl'} name='Dan Abrahmov' src={avatars[4]} />
-                    </Box>
-                </WrapItem>
-            </Wrap> */}
-        </Center>
+                <Box
+                    as="button"
+                >
+                    <Link to={'/user3'}>
+                        <Image
+                            borderRadius={'full'}
+                            src={avatars[2]}
+                            alt='rosto de uma pessoa'
+                            width={'200px'}
+                        />
+                    </Link>
+                </Box>
+                <Box
+                    as="button"
+                >
+                    <Link to={'/user4'}>
+                        <Image
+                            borderRadius={'full'}
+                            src={avatars[3]}
+                            alt='rosto de uma pessoa'
+                            width={'200px'}
+                        />
+                    </Link>
+                </Box>
+            </Slider>
+        </Box>
     )
 }
 
