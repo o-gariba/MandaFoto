@@ -124,6 +124,7 @@ const PostDadosForm = ({ posts }) => {
                                                 <form
                                                     onSubmit={(e) => {
                                                         e.preventDefault()
+                                                        // criarComentario(comentarios)
                                                         console.log(e.target[0].value)
                                                         handleComentario(e.target[0].value)
                                                         e.target.reset()

@@ -57,11 +57,11 @@ Criar um feed de um perfil do Instagram
 
 - Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
 > Ordem de funcionalidades:
-> > - [X] Footer
-> > - [X] Fazer o modal de compartilhamento
-> > - [X] Fazer o campo de comentário aparecer e funcionar (usar accordion @chakra)
-> > - [X] Fazer o post customizado aceitar todas as funcionalidades adicionadas nos posts padrões
-> > - [X] Fazer com que a página de um usuário apareça ao clicar no seu avatar
+> > - [X] Na página de cada usuario, sumir com o Carousel
+> > - [] Colocar dados (nome, seguidores, seguindo, bio) nos 5 perfis do carousel
+> > - [] Manter padrão de img quadrada no post, smp no msm tamanho
+> > - [] Nos posts que eu crio, isolar a funcionalidade de curtir, comentar e salvar
+> > - [] Aplicar efeito de scrool infinito no Carousel
 > > - [] Estruturar como o router vai funcionar
 > > - [] Curtir e salvar sem alterar a img do post e do avatar
 > > - [] Fazer Readme

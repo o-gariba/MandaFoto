@@ -7,7 +7,7 @@ import { BiCommentDetail } from 'react-icons/bi'
 import { useRef, useState } from 'react'
 import { ChatIcon } from '@chakra-ui/icons'
 
-const PostPadroes = ({ criarComentario, comentario }) => {
+const PostPadroes = ({ semente }) => {
 
     const [curtido, setCurtido] = useState(false)
     const [salvo, setSalvo] = useState(false)
@@ -41,7 +41,6 @@ const PostPadroes = ({ criarComentario, comentario }) => {
     const [comentarios, setComentarios] = useState([])
 
     const handleComentario = (comentario) => {
-        // console.log(comentarios)
         const novoArrayComentario = [...comentarios, comentario]
         setComentarios(novoArrayComentario)
     }
@@ -73,12 +72,12 @@ const PostPadroes = ({ criarComentario, comentario }) => {
                         borderWidth='1px'
                         gap='15px'
                     >
-                        <Image borderRadius={'full'} boxSize='50px' src={`https://picsum.photos/seed/${Math.random()}/200`} />
+                        <Image borderRadius={'full'} boxSize='50px' src={semente[0]} />
                         <Text fontSize={'xl'}>
-                            {propriedades.nomeUser}
+                            {semente[1]}
                         </Text>
                     </Flex>
-                    <Image src={`https://picsum.photos/seed/${Math.random()}/410`} alt={''} />
+                    <Image src={semente[2]} alt={''} />
                     <Box
                         p='1'
                         borderWidth={'1px'}
