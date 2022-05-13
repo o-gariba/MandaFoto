@@ -45,7 +45,6 @@ const Cabecalho = ({ logo, criarPost }) => {
 
             <Modal
                 initialFocusRef={initialRef}
-                // finalFocusRef={finalRef}
                 isOpen={isOpen}
                 onClose={onClose}
             >
@@ -82,7 +81,6 @@ const Cabecalho = ({ logo, criarPost }) => {
                             colorScheme={'red'}
                             mr={3} 
                             onClick={(e) => {
-                                // console.log('form submetido')
                                 criarPost(urlAvatar, usuario, imgPost)
                                 toast(
                                     {

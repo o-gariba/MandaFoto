@@ -1,69 +1,46 @@
-# Projeto 4 - React State e Routes
+<div align="center">
+    <img src="./src/components/assetslogo2.png" alt="Logo do projeto, escrito em letras vermelhas Postei">
+</div>
+
+# Projeto 4 - React State e Routes ![Badge](https://img.shields.io/website-up-down-green-red/http/postei-projeto4.surge.sh)
+
+![Badge](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 ## Desafio
 
 Criar um feed de um perfil do Instagram
 
-## O que devo fazer?
+## Descrição do Projeto :camera:
 
-> 1. Pensar em um nome para o projeto. Lembrando que ele vai ser similar ao Instagram
-> > ideias: Instagram, gramInsta, Insgramta, Mandafoto, Fotonow
+O ***Postei*** é uma plataforma de compartilhamento de fotos e imagens, que possibilita ao usuário comentar fotos de outras pessoas, curtir, salvar e compartilhar. Cada usuário tem uma página própria, onde podemos ver seu histórico de postagens.
 
-> 2. Readme com: 
-> > - Descrição do projeto
-> > - Tecnologias usadas: reactJs, Chakra UI
-> > - Link do deploy
-> > - Desenvolvedores
-> ***Sugestão de readme: [MaisVocê Receitas](https://github.com/camiyung/MaisVoce)***
+(O projeto não persiste dados e todas as imagens dos posts padrões são geradas aleatoriamente usando o site [Lorem Picsum](https://picsum.photos))
 
-> 3. Header contendo:
-> > - Nome do projeto (estilizar no gimp ou no Canva)
-> > - Botão para add uma nova postagem no meu perfil
-> > > - Ao clicar no botão, um MODAL deve aparecer, contendo as seguintes informações:
-> > > > - ????
-> > > - Quando clicar em postar, quero ver o meu novo post no meu feed
-> > - Quando a postagem for concluída, um TOAST de sucesso deve aparecer
+## Como clonar e rodar o projeto na sua máquina :repeat:
 
-> 4. Carousel na homepage com pelo menos 5 avatares de outros usuários (igual a sessão de stories do Insta)
-> > - Quando clicar em um avatar, redirecionar (Router) para a página desse usuário, que deve conter:
-> > > - Avatar em tamanho maior (como no insta)
-> > > - Nome
-> > > - numero de publicações, seguidores e seguindo (igual insta)
-> > > - Bio
-> > > - 6 publicações (imagens retangulares simples)
+1. No terminal, escolha uma pasta na sua máquina que receberia a pasta deste projeto
+2. Com o git instalado, escreva no seu terminal `git clone https://github.com/o-gariba/MandaFoto.git`
+3. O projeto foi clonado, acesse o novo diretório criado `cd MandaFoto/`
+4. Instale todas os pacotes usados no projeto: `npm install`
+5. Rode o projeto em uma porta da sua rede interna: `npm start`
 
-> 5. Na pág. inicial, deve ter 3 publicações, nome, foto, ícones de curtir, compartilhar, salvar e campo para comentar com botão para publicar
-> > - Ícones brancos
-> > - quando clicar no CURTIR, o coração se torna vermelho
-> > - Se clicar novamente em curtir, volta a ficar branco
-> > - Clicando no campo comentar, posso digitar uma mensagem
-> > > - Após escrever a mensagem, posso clicar em PUBLICAR, poderei ver minha mensagem logo abaixo do vampo para escrever comentarios 
-> > - Clicando em compartilhar,um MODAL deve aparecer com um campo de input para que eu escreva o nome de um usuario da rede. Clicando em enviar, um TOAST de sucesso deve aparecer
-> > - Clicando no icone SALVAR, ele sai de branco para preto. Clicando novamente, ele volta a ficar branco
-> > - Footer nao precisa ter redes sociais
+## Tecnologias utilizadas :wrench:
 
-### Organização pessoal / Ordem de desenvolvimento
+![Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Badge](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
+![Badge](https://img.shields.io/badge/Firefox_Browser-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)
+![Badge](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/adf10e74-f38f-454b-b653-7c3fa56a70f3/deploy-status)](https://app.netlify.com/sites/postei-projeto4/deploys)
 
-- Listar o número de páginas diferentes
-> - Página inicial (com campo de add nova img, carousel e 3 publicações aleatorias) 
-> - 5 páginas e usuarios imaginários (páginas com a msm estrutura)
+## Link do deploy :computer:
 
-- Modais que vou usar
-> - Para postar uma nova img
-> - Quando clico em compartilhar um post de outro usuario
+Acesse o Postei [clicando aqui](http://postei-projeto4.surge.sh)
 
-- Desenhar no Presentations o fluxo de interações E CONFIRMAR COM A ALÊ 
-> - [Esboço do fluxo de interações](https://docs.google.com/presentation/d/1xFZ_omP688UxY2f1HHezlSQBqCVIW3uFKvUn_oc-g4w/edit?usp=sharing)
+## Desenvolvedor
 
-- Fazer a estrutura mínima sem estilo, com todas as funcionalidades mínimas funcionais
-> Ordem de funcionalidades:
-> > - [X] Na página de cada usuario, sumir com o Carousel
-> > - [] Colocar dados (nome, seguidores, seguindo, bio) nos 5 perfis do carousel
-> > - [] Manter padrão de img quadrada no post, smp no msm tamanho
-> > - [] Nos posts que eu crio, isolar a funcionalidade de curtir, comentar e salvar
-> > - [] Aplicar efeito de scrool infinito no Carousel
-> > - [] Estruturar como o router vai funcionar
-> > - [] Curtir e salvar sem alterar a img do post e do avatar
-> > - [] Fazer Readme
+Euu :)
 
-- Fazer estilos com chackra (?)
+## Colaborações
+
+Gostaria de colaborar com o projeto? Sinta-se a vontade para me chamar a qualquer momento por [aqui](https://wa.me/5516993797689)

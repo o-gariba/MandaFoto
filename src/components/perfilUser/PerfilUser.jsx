@@ -1,9 +1,7 @@
-import { Flex, Image, Spacer, Text } from "@chakra-ui/react"
+import { Flex, Image, Text } from "@chakra-ui/react"
 import { Fragment } from "react"
 import PostArea from "../postArea/PostArea"
-import PostDadosForm from "../postDadosForm/PostDadosForm"
 import PostImagem from "../postImagens/PostImagem"
-import PostPadroes from "../postPadroes/PostPadroes"
 
 const PerfilUser = ({ users }) => {
     return (

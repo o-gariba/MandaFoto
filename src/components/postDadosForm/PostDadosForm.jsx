@@ -60,7 +60,7 @@ const PostDadosForm = ({ posts }) => {
 
     return (
         <>
-            {posts.map((post, index) => {
+            {posts.map((post) => {
                 return (
                     <Fragment>
                         <Center>

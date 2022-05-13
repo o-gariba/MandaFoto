@@ -1,6 +1,5 @@
-import { Center, Box, Flex, Image, Container } from "@chakra-ui/react"
+import { Box, Image } from "@chakra-ui/react"
 import Slider from 'infinite-react-carousel'
-import { Fragment } from "react"
 
 import { Link } from "react-router-dom"
 
